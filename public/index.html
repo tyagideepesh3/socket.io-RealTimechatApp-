@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING SOCKET.IO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coding-blocks/bootstrap@4.5.2/dist/css/bootstrap.min.css"
+        integrity="sha384-qQEE8jdKJvtljxvtgWREfDOl721Sa1Qs8a1huL0PjJo3duiJ2wXnwTIRnbd/cTjY" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container" id="loginPage">
+        <h1 class="text-center text-primary my-4">ENTER YOUR INFORMATION</h1>
+        <form>
+            <div class="form-group">
+                <label for="nameId">ENTER YOUR NAME</label>
+                <input type="text" class="form-control" id="nameId" placeholder="ENTER YOUR NAME">
+            </div>
+            <div class="form-group">
+                <label for="emailId">Email address</label>
+                <input type="email" class="form-control" id="emailId" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="passId" aria-describedby="emailHelp"
+                    placeholder="Enter Your Password">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+                <label for="textId">Example textarea</label>
+                <textarea class="form-control" id="textId" rows="3"></textarea>
+            </div>
+            <button type="button" id="btnId" class="btn btn-outline-secondary btn-lg btn-block">SUBBMIT</button>
+        </form>
+    </div>
+    <div class="container" id="chatBox">
+        <h1 class="text-center text-primary my-4">CHAT BOX</h1>
+        <form>
+            <div class="form-group">
+                <label for="to">SEND TO</label>
+                <input type="text" class="form-control" id="toId" aria-describedby="emailHelp" placeholder="send To">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+                <label for="msg">Message</label>
+                <input type="text" class="form-control" id="msgId" aria-describedby="emailHelp"
+                    placeholder="Enter Msg(Default: Send All)">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            
+            <button type="button" id="sendId" class="btn btn-outline-primary">SEND</button>
+        </form>
+        <ul class="list-group my-4" id="ulId">
+            <!-- <li class="list-group-item">Vestibulum at eros</li> -->
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@coding-blocks/bootstrap@4.5.2/dist/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
